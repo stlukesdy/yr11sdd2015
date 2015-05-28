@@ -1,26 +1,30 @@
 ﻿$(document).ready(function () {
-  var display = $('#outputP');
-  var fiveMinutes = 60 * 5;
-  startTimer(fiveMinutes, display);
+  $("#runButton").click(program);
 });
 
+var program = function () {
+
+  var productArray = [];
+
+  productArray[0] = {};
+
+  productArray[0].id = 1;
+  productArray[0].name = 'Oven cleaner kit';
+  productArray[0].description = 'The ultimate solution for ovens, trays and racks';
+  productArray[0].quantity = 10;
+  productArray[0].price = 5.99;
+
+  productArray[1] = {
+    id: 1,
+    name: 'Dishwasher tablets',
+    description: 'With built-in rinse aid action',
+    quantity: 20,
+    price: 8.99
+  };
 
 
+  for (var i = 0; i < 2; i = i + 1) {
+    console.log("name = " + productArray[i].name + " price = " + productArray[i].price);
+  }
 
-// from http://stackoverflow.com/a/20618517/1109316
-function startTimer(duration, display) {
-  var timer = duration, minutes, seconds;
-  setInterval(function () {
-    minutes = parseInt(timer / 60, 10);
-    seconds = parseInt(timer % 60, 10);
-
-    minutes = minutes < 10 ? "0" + minutes : minutes;
-    seconds = seconds < 10 ? "0" + seconds : seconds;
-
-    display.text(minutes + ":" + seconds);
-    console.log(timer);
-    if (--timer < 0) {
-      timer = duration;
-    }
-  }, 1000);
-}
+};
