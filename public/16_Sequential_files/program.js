@@ -1,8 +1,9 @@
 ﻿$(document).ready(function () {
-  $("#runButton").click(program);
+  $("#writeButton").click(writeProgram);
+  $("#readButton").click(readProgram);
 });
 
-var program = function () {
+var writeProgram = function () {
 
   var productArray = [];
 
@@ -14,10 +15,21 @@ var program = function () {
   productArray[1].id = 2;
   productArray[1].name = 'Dishwasher tablets';
 
-
+  var productData = [];
 
   for (var i = 0; i < 2; i = i + 1) {
-    console.log("id = " + productArray[i].id + " name = " + productArray[i].name);
+    productData.push(productArray[i]);
+  }
+
+  localStorage.setItem('productData', JSON.stringify(productData));
+};
+
+var readProgram = function () {
+
+  var producData2 = JSON.parse(localStorage.getItem('productData'));
+
+  for (var i = 0; i < producData2.length; i = i + 1) {
+    console.log(producData2[i].id + " " + producData2[i].name);
   }
 
 };

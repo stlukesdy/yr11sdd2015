@@ -36,22 +36,72 @@ productArray(1).name = "Oven cleaner kit"
 productArray(2).id = 2
 productArray(2).name = "Dishwasher tablets"
 
+#
+# Creating a file
+#
 Open ProductData for output
 
 FOR i = 1 to 2 STEP 1
-  Display "name = "; productArray(i).name; " price = "; productArray(i).price
   Write ProductData from productArray(i).id, productArray(i).name
 NEXT i
 
+Write ProductData from "xxx", "xxx"
+
 Close ProductData
 
+#
+# Printing the contents of a file
+#
+Open ProductData2 for input
+
+Read id, name from ProductData2
+
+WHILE id <> "xxx"
+  Display id, name
+  Read id, name from ProductData2
+END WHILE
+
+Close ProductData2
+
 </pre>
-      <h3>Javascript</h3>
-      <pre>
+        <h3>Javascript</h3>
+<pre>
+$(document).ready(function () {
+  $("#writeButton").click(writeProgram);
+  $("#readButton").click(readProgram);
+});
+
+var writeProgram = function () {
+
   var productArray = [];
+
   productArray[0] = {};
   productArray[0].id = 1;
   productArray[0].name = 'Oven cleaner kit';
+
+  productArray[1] = {};
+  productArray[1].id = 2;
+  productArray[1].name = 'Dishwasher tablets';
+
+  var productData = [];
+
+  for (var i = 0; i < 2; i = i + 1) {
+    productData.push(productArray[i]);
+  }
+
+  localStorage.setItem('productData', JSON.stringify(productData));
+
+};
+
+var readProgram = function () {
+
+  var producData2 = JSON.parse(localStorage.getItem('productData'));
+
+  for (var i = 0; i < producData2.length; i = i + 1) {
+    console.log(producData2[i].id + " " + producData2[i].name);
+  }
+
+};
 
 </pre>
 
@@ -59,13 +109,16 @@ Close ProductData
 
     <div class="row">
       <p>Open this document in Chrome and open the developer tools Windows: F12 or Ctrl-shift+I, Mac: Cmd + Opt + I.</p>
-      <p>Click run button.</p>
-      <button id="runButton" type="button" class="btn btn-primary">Run</button>
-      <p>Observe the console output.</p>
-      <h3>Your task</h3>
+      <p>Click Write and Read buttons.</p>
+      <button id="writeButton" type="button" class="btn btn-primary">Write</button>
+      <button id="readButton" type="button" class="btn btn-primary">Read</button>
+        <p>Observe the console output and the Resources --> Local Storage.</p>
+
+      <img src="images/chromedevtools.jpeg" />
+        <h3>Your task</h3>
       <p>
 
-        Modify <code>program.js</code>: Develop a procedure to print out the 7 times table.
+        Modify <code>program.js</code>: Add the quantity attribute to the stored data.
       </p>
     </div>
 
