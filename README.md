@@ -40,8 +40,5 @@ grunt
 2. Select the new workspace `yr11sdd2015`.
 3. Click **START EDITING**. Wait until loaded.
 4. Open new Terminal Alt-T (Window --> New Terminal).
-5. In your bash shell type the following command:
-```
-git pull
-```
+5. In your new terminal bash shell type the following command:`git pull`
 6. Close the new Terminal created in step 4.
