@@ -1,4 +1,4 @@
-# yr11sdd2015
+# computingclub2015
 
 ## Installation steps
 
