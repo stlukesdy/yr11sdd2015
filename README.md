@@ -42,3 +42,15 @@ grunt
 4. Open new Terminal Alt-T (Window --> New Terminal).
 5. In your new terminal bash shell type the following command:`git pull`
 6. Close the new Terminal created in step 4.
+
+
+## Useful bash shell commands
+
+clear - clear the terminal screen
+
+    clear
+
+Print working directory:
+
+    pwd
+
