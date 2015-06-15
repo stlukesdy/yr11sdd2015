@@ -43,6 +43,20 @@ grunt
 5. In your new terminal bash shell type the following command:`git pull`
 6. Close the new Terminal created in step 4.
 
+## npm install in directory "node"
+
+1. logon to <a href="https://c9.io" target="_blank">c9.io</a>
+2. Select the new workspace `yr11sdd2015`.
+3. Click **START EDITING**. Wait until loaded. 
+4. Right click the folder "node" and select "Open Terminal Here Alt-L"
+5. In the new bash terminal window type `npm install`
+6. Close the new Terminal created in step 4.
+
+
+## run a node program
+
+1. Right click the .js file you want to run e.g. `node/teacher/01_Sequential_files/program.js`
+
 
 ## Useful bash shell commands
 
@@ -50,7 +64,16 @@ clear - clear the terminal screen
 
     clear
 
-Print working directory:
+pwd - print name of current/working directory
 
     pwd
+
+dir - list directory contents
+
+    dir
+
+
+cd - change directory
+
+    cd
 
