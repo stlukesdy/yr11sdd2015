@@ -1,4 +1,4 @@
-fs = require('fs');
+var fs = require('fs');
 
 var contentArray = fs.readFileSync('input.txt', 'utf8').split("\n");
 
