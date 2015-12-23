@@ -56,7 +56,7 @@ grunt
 ## run a node program
 
 1. Right click the .js file you want to run e.g. `node/teacher/01_Sequential_files/program.js`
-
+2. Select "Run".
 
 ## Useful bash shell commands
 
